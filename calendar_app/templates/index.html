@@ -1,0 +1,30 @@
+<!-- inherit from base.html-->
+{% extends "base_template.html" %}
+{% load static %}
+
+<!-- Replace block content in base_template.html -->
+{% block content %}
+<h1>Calendar</h1>
+
+<a href="{% url 'add_event' %}" class="btn btn-success">Add Event</a>
+
+<p><strong><br><br>Contributors:</strong>Put contributors here</p>
+<ul class="list-group">  
+                   
+    <li class = "list-group-item"> 
+        <ul class="list-group">
+            <img src="{% static 'images/calendar.jpg' %}">
+        </ul>
+        
+    </li>
+  
+</ul>
+    
+
+<body>
+    
+
+
+</body>
+  
+{% endblock %}

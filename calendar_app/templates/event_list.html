@@ -1,0 +1,32 @@
+<!-- inherit from base.html-->
+{% extends "base_template.html" %}
+
+<!-- Replace block content in base_template.html -->
+{% block content %}
+
+<h1> List of Events</h1>
+
+<ul class="list-group">
+    {%for i in events%}
+                   
+    <li class = "list-group-item"> 
+        
+        <p><strong>Event: {{i.name}}      
+
+        </strong></p>
+
+        <p class="indented">
+            <a href="{% url 'event_details' %}?event_id={{ i.id }}" class="btn btn-primary">View Event</a>
+            <a href="{% url 'update_event' %}?event_id={{ i.id }}" class="btn btn-primary">Edit Event</a>
+            <a href="{% url 'delete_event' %}?event_id={{ i.id }}" class="btn btn-danger">Delete Event</a>
+        </p>
+        
+    </li>
+    {% endfor %}
+</ul>
+
+
+
+
+  
+{% endblock %}

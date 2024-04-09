@@ -1,0 +1,23 @@
+<!-- inherit from base.html-->
+{% extends "base_template.html" %}
+
+<!-- Replace block content in base_template.html -->
+{% block content %}
+
+<h1> Event Details</h1>
+
+<h2> Event Name: {{event.name}} </h2>
+
+<p> Event Start: {{event.start_time}}</p>
+
+<p> Event End: {{event.end_time}}</p>
+
+<p> Event Description: {{event.description}}</p>
+
+<p> Event Location: {{event.location}}</p>
+
+
+
+
+  
+{% endblock %}
