@@ -6,6 +6,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+#test git
+
 
 
 # Create your views here.
